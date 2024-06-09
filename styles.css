@@ -36,6 +36,8 @@ input[type="text"] {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
+    width: 100%;
+    /* Full width on small screens */
 }
 
 button {
@@ -67,4 +69,19 @@ button:hover {
 
 .meanings-container strong {
     color: #007bff;
+}
+
+@media screen and (max-width: 768px) {
+    .search-box {
+        flex-direction: column;
+        /* Stack inputs vertically on smaller screens */
+    }
+
+    input[type="text"],
+    button {
+        margin-right: 0;
+        /* Remove right margin to prevent overflow on smaller screens */
+        margin-bottom: 10px;
+        /* Add bottom margin for spacing */
+    }
 }
